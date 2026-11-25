@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- main box of my app -->
+  <div class="container">
+
+    <h1>🌦️ My Weather App</h1>
+    <p class="small-text">Type a city name and I will show you its weather!</p>
+
+    <!-- search box -->
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Enter city name... e.g. Karachi">
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <!-- example cities, click karke try kar sakte hain -->
+    <div class="example-cities">
+      <span>Try:</span>
+      <button class="city-btn" data-city="Karachi">Karachi</button>
+      <button class="city-btn" data-city="Lahore">Lahore</button>
+      <button class="city-btn" data-city="Islamabad">Islamabad</button>
+      <button class="city-btn" data-city="London">London</button>
+    </div>
+
+    <!-- loading aur error yahan show hoga -->
+    <p id="loadingText" class="loading" style="display: none;">Loading... ⏳</p>
+    <p id="errorText" class="error" style="display: none;"></p>
+
+    <!-- jab weather milega to ye wala hisa show hoga -->
+    <div id="weatherBox" style="display: none;">
+
+      <h2 id="cityName">City Name</h2>
+      <p id="countryName" class="small-text">Country</p>
+
+      <div id="weatherEmoji" class="big-emoji">☀️</div>
+      <div id="temperature" class="big-temp">25°C</div>
+      <p id="description" class="description">Sunny</p>
+      <p id="feelsLike" class="small-text">Feels like 25°C</p>
+
+      <!-- °C / °F change karne wala button -->
+      <button id="unitBtn" class="unit-btn">Change to °F</button>
+
+      <!-- 3 choti details wale box -->
+      <div class="details">
+        <div class="detail-box">
+          <p>💧</p>
+          <p>Humidity</p>
+          <p><b id="humidity">-</b></p>
+        </div>
+        <div class="detail-box">
+          <p>💨</p>
+          <p>Wind</p>
+          <p><b id="wind">-</b></p>
+        </div>
+        <div class="detail-box">
+          <p>🌧️</p>
+          <p>Rain</p>
+          <p><b id="rain">-</b></p>
+        </div>
+      </div>
+
+      <!-- 5 din ka forecast -->
+      <h3>Next 5 Days</h3>
+      <div id="forecastBox" class="forecast-box">
+        <!-- javascript yahan forecast ke boxes banayega -->
+      </div>
+
+    </div>
+
+    <!-- pehle ye message show hota hai -->
+    <div id="firstMessage">
+      <p style="font-size: 50px;">🌤️</p>
+      <p>Search a city to see weather</p>
+    </div>
+
+    <hr>
+    <p class="footer">Made by me for my Bano Qabil assignment ❤️<br>
+    Weather data from <a href="https://open-meteo.com/" target="_blank">Open-Meteo</a> (free, no API key)</p>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
