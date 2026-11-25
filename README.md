@@ -59,7 +59,7 @@ python3 -m http.server 8000
 ## Submission
 
 - **GitHub Repository:** https://github.com/canvaloginayaan-creator/Weather-App
-- **Vercel Deployment:** _I will paste my Vercel link here after deploying_
+- **Vercel Deployment:** https://weather-app-delta-three-22.vercel.app/
 
 ## Ideas to add later
 
